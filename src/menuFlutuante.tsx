@@ -15,6 +15,7 @@ import {
     Box,
 } from "@mui/material"
 import Apps from "@mui/icons-material/Apps";
+import { ListSubheader } from "@mui/material";
 
 import AppsIcon from '@mui/icons-material/Apps';
 import HomeIcon from '@mui/icons-material/Home';
@@ -61,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         paddingRight: '40px',
     },
     grow: {
-        flexGrow: 1
+        flexGrow: 1,
     },
     ListItemText: {
         fontSize: '14px !important',
@@ -69,6 +70,9 @@ const useStyles = makeStyles((theme) => ({
     listItem: {
         paddingTop: '4px !important',
         paddingBottom: '4px !important',
+    },
+    subheader: {
+        textTransform: 'uppercase',
     }
 }));
 
@@ -149,7 +153,7 @@ function MenuFlutuante({ estadoDoMenu, fixarMenu, fecharMenu }: MenuFlutuantePro
                     </ListItem>
                 </List>
                 <Divider />
-                <Box p={5}>
+                <Box p={7}>
                     <Typography variant='body2'>
                         Faça login para curtir vídeos, comentar e se increver.
                     </Typography>
@@ -162,6 +166,110 @@ function MenuFlutuante({ estadoDoMenu, fixarMenu, fecharMenu }: MenuFlutuantePro
                         </Button>
                     </Box>
                 </Box>
+                <Divider />
+
+
+                <List 
+                    component='nav'
+                    arial-labelledby='nested-list-subheader'
+                    subheader={
+                        <ListSubheader
+                        component='div'
+                        id='nested-list-subheader'
+                        className={classes.subheader}
+                        >
+                            O melhor do youtube
+                        </ListSubheader>
+                    }
+                >
+                <ListItem button classes={{ root: classes.listItem }} onClick={fixarMenu}>
+                        <ListItemIcon>
+                            <AddCircle />
+                        </ListItemIcon>
+                        <ListItemText
+                            classes={{
+                                primary: classes.ListItemText
+                            }} primary={'Músicas'} />
+                    </ListItem>
+                    <ListItem button classes={{ root: classes.listItem }} onClick={fixarMenu}>
+                        <ListItemIcon>
+                            <AddCircle />
+                        </ListItemIcon>
+                        <ListItemText
+                            classes={{
+                                primary: classes.ListItemText
+                            }} primary={'Esportes'} />
+                    </ListItem>
+                    <ListItem button classes={{ root: classes.listItem }} onClick={fixarMenu}>
+                        <ListItemIcon>
+                            <AddCircle />
+                        </ListItemIcon>
+                        <ListItemText
+                            classes={{
+                                primary: classes.ListItemText
+                            }} primary={'Jogos'} />
+                    </ListItem>
+                </List>
+                <List>
+                    <ListItem button classes={{ root: classes.listItem }} onClick={fixarMenu}>
+                        <ListItemIcon>
+                            <AddCircle />
+                        </ListItemIcon>
+                        <ListItemText
+                            classes={{
+                                primary: classes.ListItemText
+                            }} primary={'Filmes'} />
+                    </ListItem>
+                    <ListItem button classes={{ root: classes.listItem }} onClick={fixarMenu}>
+                        <ListItemIcon>
+                            <AddCircle />
+                        </ListItemIcon>
+                        <ListItemText
+                            classes={{
+                                primary: classes.ListItemText
+                            }} primary={'Notícias'} />
+                    </ListItem>
+                </List>
+                <List>
+                    <ListItem button classes={{ root: classes.listItem }} onClick={fixarMenu}>
+                        <ListItemIcon>
+                            <AddCircle />
+                        </ListItemIcon>
+                        <ListItemText
+                            classes={{
+                                primary: classes.ListItemText
+                            }} primary={'Ao vivo'} />
+                    </ListItem>
+                    <ListItem button classes={{ root: classes.listItem }} onClick={fixarMenu}>
+                        <ListItemIcon>
+                            <AddCircle />
+                        </ListItemIcon>
+                        <ListItemText
+                            classes={{
+                                primary: classes.ListItemText
+                            }} primary={'Destaques'} />
+                    </ListItem>
+                </List>
+                <List>
+                    <ListItem button classes={{ root: classes.listItem }} onClick={fixarMenu}>
+                        <ListItemIcon>
+                            <AddCircle />
+                        </ListItemIcon>
+                        <ListItemText
+                            classes={{
+                                primary: classes.ListItemText
+                            }} primary={'Vídeos 360'} />
+                    </ListItem>
+                    <ListItem button classes={{ root: classes.listItem }} onClick={fixarMenu}>
+                        <ListItemIcon>
+                            <AddCircle />
+                        </ListItemIcon>
+                        <ListItemText
+                            classes={{
+                                primary: classes.ListItemText
+                            }} primary={'Procurar mais'} />
+                    </ListItem>
+                </List>
                 <Divider />
             </div>
         </Drawer>

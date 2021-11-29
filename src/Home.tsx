@@ -1,28 +1,8 @@
-import React, { useState } from "react";
 import { makeStyles } from '@mui/styles';
-import {
-    AppBar,
-    Toolbar,
-    IconButton,
-    Drawer,
-    Button,
-    List,
-    Typography,
-    Divider,
-    ListItem,
-    ListItemIcon,
-    ListItemText,
-} from "@mui/material"
-import Apps from "@mui/icons-material/Apps";
-import MailIcon from '@mui/icons-material/Mail'
-import MenuIcon from '@mui/icons-material/Menu'
-import AccountCircle from '@mui/icons-material/AccountCircle'
-import AppsIcon from '@mui/icons-material/Apps'
-import MoreVert from '@mui/icons-material/MoreVert'
-import VideoCall from '@mui/icons-material/VideoCall'
 import MenuFlutuante from "./menuFlutuante";
 import BarraAplicacao from "./barraAplicacao";
 import { useEstadoDaAplicacao } from "./estadoDaAplicacao";
+import { Conteudo } from "./conteudo";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -73,6 +53,8 @@ function Home() {
 
 
             <MenuFlutuante estadoDoMenu={estadoDoMenu} fecharMenu={fecharMenu} fixarMenu={fixarMenu}/>
+
+            <Conteudo/>
         </div>
     );
 }
